@@ -47,9 +47,7 @@ pipeline
             }
         }
     }
-} //pipeline end
-
-// Notification method
+    // Notification method
 def notifyBuild(String buildStatus = 'STARTED') {
     buildStatus = buildStatus ?: 'SUCCESS'
 
@@ -70,3 +68,6 @@ def notifyBuild(String buildStatus = 'STARTED') {
 
     slackSend(color: colorCode, message: summary)
 }
+
+} //pipeline end
+
